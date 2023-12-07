@@ -99,4 +99,11 @@
             android:layout_margin="16dp" />
     </androidx.core.widget.NestedScrollView>
 
+    <include
+        android:id="@+id/loading_view"
+        layout="@layout/loading_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchorGravity="center" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

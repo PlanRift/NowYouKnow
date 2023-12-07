@@ -28,12 +28,30 @@ class DetailNews : AppCompatActivity() {
         val date = intent.getStringExtra(DATE_NEWS)
         setupMyXML(dataNews, date)
         setupWebView(dataNews)
+        setSupportActionBar(binding.toolbarDetail)
+
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            title = null
+        }
 
     }
 
     private fun setupWebView(dataNews: PostsItem?) {
         val webSetting = binding.wvDetail.settings
         webSetting.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+
+        binding.wvDetail.webViewClient = object:WebViewClient() {
+            override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                super.onPageStarted(view, url, favicon)
+                binding.loadingView.root.visibility = View.VISIBLE
+            }
+
+            override fun onPageFinished(view: WebView?, url: String?) {
+                super.onPageFinished(view, url)
+                binding.loadingView.root.visibility = View.GONE
+            }
+        }
 
         dataNews?.link?.let { binding.wvDetail.loadUrl(it) }
     }

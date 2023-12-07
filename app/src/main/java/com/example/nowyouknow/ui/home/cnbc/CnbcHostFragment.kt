@@ -30,12 +30,6 @@ class CnbcHostFragment : Fragment() {
     }
 
     private fun setUpViewPager() {
-        binding.vpCnbc.adapter = CnbcPagerAdapter(this)
-        val tablist = arrayOf(
-            "News",
-            "Terbaru",
-            "Tech"
-        )
 
         val adapter = CnbcPagerAdapter(this)
         binding.vpCnbc.adapter = adapter

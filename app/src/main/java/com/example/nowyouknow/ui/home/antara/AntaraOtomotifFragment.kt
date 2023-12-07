@@ -7,7 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.nowyouknow.R
+import androidx.activity.ComponentActivity
+import androidx.activity.OnBackPressedDispatcher
 import com.example.nowyouknow.adapter.NewsAdapter
 import com.example.nowyouknow.data.repository.NewsRepository
 import com.example.nowyouknow.databinding.FragmentAntaraOtomotifBinding

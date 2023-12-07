@@ -29,12 +29,6 @@ class CnnHostFragment : Fragment() {
     }
 
     private fun setUpViewPager() {
-        binding.vpCnn.adapter = CnnPagerAdapter(this)
-        val tablist = arrayOf(
-            "Terbaru",
-            "Internasional",
-            "Hiburan"
-        )
 
         val adapter = CnnPagerAdapter(this)
         binding.vpCnn.adapter = adapter

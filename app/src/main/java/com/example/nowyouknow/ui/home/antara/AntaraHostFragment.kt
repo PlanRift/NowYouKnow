@@ -30,12 +30,6 @@ class AntaraHostFragment : Fragment() {
     }
 
     private fun setUpViewPager() {
-        binding.vpAntara.adapter = AntaraPagerAdapter(this)
-        val tablist = arrayOf(
-            "Terbaru",
-            "Ekonomi",
-            "Otomotif"
-        )
 
         val adapter = AntaraPagerAdapter(this)
         binding.vpAntara.adapter = adapter
